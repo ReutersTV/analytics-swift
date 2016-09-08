@@ -37,7 +37,7 @@ class AnalyticsSwiftTests: XCTestCase {
   }
   
   func testExample() {
-    var analytics = Analytics(writeKey: "Z2qQi0HsunlFVULJmUi6R0JAwIF2S7R1", queue: Array(), executor: SynchronousExecutor(name: "com.segment.executor.test"))
+    let analytics = Analytics(writeKey: "Z2qQi0HsunlFVULJmUi6R0JAwIF2S7R1", queue: Array(), executor: SynchronousExecutor(name: "com.segment.executor.test"))
     for index in 1...21 {
       analytics.enqueue(TrackMessageBuilder(event: "hello, world" + String(index)).userId("prateek"))
       analytics.enqueue(TrackMessageBuilder(event: "bye, world" + String(index)).userId("prateek"))
